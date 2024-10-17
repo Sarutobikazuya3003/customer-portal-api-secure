@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  build:
+  test-node:
     docker:
       - image: circleci/node:16
     working_directory: ~/repo
@@ -14,5 +14,11 @@ jobs:
           name: Install Dependencies
           command: npm install
       - run:
-          name: Build the Project
-          command: npm run build
+          name: Run Tests
+          command: npm test --passWithNoTests
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test-node
