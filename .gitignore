@@ -1,0 +1,19 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# SSL PEM files (to avoid pushing sensitive data)
+*.pem
+
+# SQLite database file (if you don't want to push it)
+*.db
+
+# Environment variables
+.env
+
+# MacOS-specific files
+.DS_Store
